@@ -1,0 +1,279 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,
+input,
+button {
+    font-family: "Open Sans", sans-serif;
+}
+
+input,
+button {
+    font-size: 16px;
+}
+
+.head_bar {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: cornflowerblue;
+    color: white;
+}
+
+main {
+    max-width: 800px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.input_section {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.input_section > h2 {
+    text-align: center;
+    color: cornflowerblue;
+}
+
+.input_section > form > .input {
+    margin: 8px 0;
+}
+
+.input_section > form > button {
+    background-color: cornflowerblue;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.input_section > form > button > span {
+    font-weight: bold;
+}
+
+.input_section > form > .input > input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.input_section > form > .input > label {
+    color: cornflowerblue;
+    font-weight: bold;
+}
+
+.input_section > form > .input_inline {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+}
+
+.input_section > form > .input_inline > label {
+    color: cornflowerblue;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.search_section {
+    margin: 16px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.search_section > h2 {
+    color: cornflowerblue;
+}
+
+.search_section > form {
+    padding: 16px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr 0.5fr;
+    grid-gap: 10px;
+}
+
+.search_section > form > label {
+    display: flex;
+    align-items: center;
+}
+
+.search_section > form > input {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.search_section > form > button {
+    background-color: cornflowerblue;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book_shelf {
+    margin: 16px 0 0 0;
+    border: 1px solid black;
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.book_shelf > h2 {
+    color: cornflowerblue;
+}
+
+.book_shelf > .book_list {
+    padding: 16px;
+}
+
+.book_shelf > .book_list > .book_item {
+    padding: 8px 16px 16px 16px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.book_shelf > .book_list > .book_item > h3,
+p {
+    margin: 8px 0;
+}
+
+.book_shelf > .book_list > .book_item > .action > button {
+    border: 0;
+    padding: 5px;
+    margin: 0 5px 0 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book_shelf > .book_list > .book_item > .action > .green {
+    background-color: darkgreen;
+    color: #ffffff;
+}
+
+.book_shelf > .book_list > .book_item > .action > .red {
+    background-color: darkred;
+    color: #ffffff;
+}
+
+.trash-button {
+    margin-left: 4px;
+    background-color: #de3756;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.trash-button:hover {
+    background-color: #941515;
+}
+.check-button {
+    background-color: #20a746;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+.check-button:hover {
+    background-color: #036608;
+}
+.unRead-button {
+    background-color: rgb(228, 178, 85);
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+.unRead-button:hover {
+    background-color: #b2730e;
+}
+.dialog {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.custom-dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
+}
+
+.show-dialog {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.text-dialog {
+    font-size: 20px;
+    color: #06283d;
+    margin-bottom: 28px;
+    text-align: center;
+    line-height: normal;
+}
+
+.delete-button {
+    margin-top: 2em;
+    font-size: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 8px;
+    height: 2.5em;
+    width: 40%;
+    background-color: #de3756;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.delete-button:hover {
+    background-color: #941515;
+}
+
+.cancel-button {
+    margin-top: 2em;
+    font-size: 15px;
+    margin-right: 20px;
+    margin-left: 2px;
+    margin-bottom: 8px;
+    height: 2.5em;
+    width: 40%;
+    background-color: #3acee8;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.cancel-button:hover {
+    background-color: #0a79a5e2;
+}
